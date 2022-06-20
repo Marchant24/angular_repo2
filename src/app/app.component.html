@@ -37,32 +37,20 @@
    
 </nav>
 
-<form>
+<form (ngSubmit)="addCard()">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nombre</label>
-    <input type="text" id="disabledTextInput" class="form-control" placeholder="Ingresa Nombre">
-  
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Apellido</label>
-
-    <input type="text" id="disabledTextInput" class="form-control" placeholder="Ingresa Apellido">
+    <label for="exampleFormControlInput1" class="form-label">CardTitle</label>
+    <input name="cardTitle" type="text" [(ngModel)]="card.cardTitle" id="cardTitle" class="form-control" placeholder="Ingresa  Title">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Fecha</label>
-    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    
+    <label for="exampleFormControlInput1" class="form-label">Description</label>
+    <input name="description" type="text" [(ngModel)]="card.description"  id="description" class="form-control" placeholder="Ingresa Description">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Nacionalidad</label>
-    <input type="text" id="disabledTextInput" class="form-control" placeholder="Ingresa Nacionalidad">
+    <label for="exampleFormControlInput1" class="form-label">Image</label>
+    <input name="image" type="text"  [(ngModel)]="card.image" id="image" class="form-control" placeholder="Ingresa Image">
   </div>
-  <div class="mb-3 form-check">
-    
-
-  </div>
-  <button type="submit" class="btn btn-primary" slot="end">REGISTRAR</button>
-  <button type="submit"class="btn btn-danger" style="margin-left: 15px;">CANCELAR</button>
+  <button type="submit" class="btn btn-primary" slot="end">SEND</button>
 </form>
 
 
@@ -107,53 +95,20 @@
 
 
 <div class="container">
-  <div class="col-4">
-    <div class="card espaciado" style="width: 18rem;">
-      <img src="https://vanguardia.com.mx/binrepository/1152x792/0c72/1152d648/none/11604/XSAA/foto2_21_VG3366046_MG2189534.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="row">
+      <div class="col-4" *ngFor="let item of dataCard">
+        <app-cardcomponent [cardTitle]="item.cardTitle" [description]="item.description"[bottonText]="item.bottonText" [image]="item.image"></app-cardcomponent>
+      </div>  
       </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <app-cardcomponent ></app-cardcomponent>
-   </div>
+  
+
+ 
+
+
 
     
-  </div>
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-      <img src="https://como-funciona.co/wp-content/uploads/2018/10/Como-funcionan-los-motores-di%C3%A9sel.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-      <img src="https://www.diariomotor.com/imagenes/2018/10/mazda-diesel-no-ha-muerto-01.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-      <img src="https://www.mundodelmotor.net/wp-content/uploads/2017/07/tipos-de-motores-1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-      <img src="https://images.hgmsites.net/lrg/2020-ford-mustang-shelby-gt500s-5-2-liter-supercharged-v-8_100710703_l.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
 
+ 
 
 
 

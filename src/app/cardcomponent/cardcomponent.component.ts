@@ -14,6 +14,8 @@ export class CardcomponentComponent implements OnInit {
   @Input()image: string=""
 
 
+ 
+
   constructor() { }
 
   ngOnInit(): void {

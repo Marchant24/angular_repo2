@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CardModel } from './models/card.model';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-app';
+  card: CardModel = new CardModel();
+  dataCard: CardModel[]=[
 
-  dataCard: any[]=[
     {
       cardTitle: "Vagabond",
       description: "Made By Inoue GOD",
@@ -40,11 +42,24 @@ export class AppComponent {
       image: "https://mangascout.com/wp-content/uploads/2021/08/3-1.jpg?ezimgfmt=ng:webp/ngcb2"
     },
     {
-      cardTitle: "Blame!",
+      cardTitle: "Blame 2!",
       description: "Made by Tsutomo GOD ",
       bottonText: "view image",
-      image: "https://64.media.https://mangascout.com/wp-content/uploads/2022/05/1-21.jpg?ezimgfmt=ng:webp/ngcb2.image.png/524bce2ea8604885d22f9d7e10c1c550/300ab91a69a0a0c1-59/s1280x1920/74cba79e084fb121601a3b2a02f9acc3ad3a65db.png"
+      image: "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/08/fondos-pantalla-full-hd-animales_4.jpg"
+    },
+    {
+      cardTitle: "Blame 2!",
+      description: "Made by Tsutomo GOD ",
+      bottonText: "view image",
+      image: "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/08/fondos-pantalla-full-hd-animales_4.jpg"
     }
+    
   ]
+
+  addCard(){
+    console.log(this.card);
+    this.dataCard.push(this.card);
+    
+  }
   
 }
