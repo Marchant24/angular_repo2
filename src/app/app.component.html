@@ -36,22 +36,7 @@
       </div>
    
 </nav>
-
-<form (ngSubmit)="addCard()">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">CardTitle</label>
-    <input name="cardTitle" type="text" [(ngModel)]="card.cardTitle" id="cardTitle" class="form-control" placeholder="Ingresa  Title">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Description</label>
-    <input name="description" type="text" [(ngModel)]="card.description"  id="description" class="form-control" placeholder="Ingresa Description">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Image</label>
-    <input name="image" type="text"  [(ngModel)]="card.image" id="image" class="form-control" placeholder="Ingresa Image">
-  </div>
-  <button type="submit" class="btn btn-primary" slot="end">SEND</button>
-</form>
+<app-form-card (envioCard)="addCard($event)"></app-form-card>
 
 
 

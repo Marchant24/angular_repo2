@@ -8,7 +8,7 @@ import { CardModel } from './models/card.model';
 })
 export class AppComponent {
   title = 'angular-app';
-  card: CardModel = new CardModel();
+  card: CardModel = new CardModel();// instancia
   dataCard: CardModel[]=[
 
     {
@@ -56,10 +56,9 @@ export class AppComponent {
     
   ]
 
-  addCard(){
-    console.log(this.card);
-    this.dataCard.push(this.card);
-    
+  addCard(card: CardModel){
+         this.dataCard.push(Object.assign({}, card));
+
   }
   
 }
