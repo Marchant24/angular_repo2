@@ -1,0 +1,19 @@
+
+<app-form-card (envioCard)="addCard($event)"></app-form-card>
+
+
+
+
+
+
+<div class="row">
+    <div class="col-4" *ngFor="let item of dataCard">
+      <app-cardcomponent [cardTitle]="item.cardTitle" [description]="item.description"[bottonText]="item.bottonText" [image]="item.image"></app-cardcomponent>
+    </div>  
+    </div>
+<div class="col-6">
+<div class="chips" style="width: 18rem;">
+<h2>Finlandia<span class="badge bg-secondary" class="text-primary">New</span></h2>
+<div class="chips-body">
+</div>
+</div>

@@ -1,0 +1,6 @@
+<app-cardcomponent *ngFor="let article of articles"
+[cardTitle]="article.title"
+[description]="article.description"
+[image]="article.urlToImage"
+[bottonText]="'go to' + article.author"
+></app-cardcomponent>
