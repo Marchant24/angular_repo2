@@ -9,6 +9,6 @@ export class marvelModel {
     events:string=""
     stories: string=""
     OrderBy: string=""
-    limit: string=""
+    
     
 }
